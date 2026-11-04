@@ -28,6 +28,12 @@
  $('#address').textContent = C.address; $('#footer-address').textContent = C.address;
  $('#directions').href = C.placeUrl;
  $('#parking').textContent = unknown(C.parking) ? '방문 전 전화로 확인해 주세요' : C.parking;
+ const shortAddr = a => (a || '').replace(/^충청남도 공주시 정안면 /, '');
+ $('#parking-address-short').textContent = shortAddr(C.parkingAddress);
+ $('#parking-address').textContent = C.parkingAddress || '';
+ $('#road-note').textContent = C.roadNote || '';
+ $('#pets').textContent = C.pets || '예약 전 문의해 주세요';
+ if (!C.parkingAddress) $('.parking-box').hidden = true;
  $('#rules').textContent = unknown(C.rules) ? '예약 시 안내해 드립니다' : C.rules;
  $('#refund').textContent = unknown(C.refundPolicy) ? '네이버 예약 화면의 안내 또는 전화 문의' : C.refundPolicy;
  $('#year').textContent = new Date().getFullYear();
@@ -149,17 +155,18 @@
  // ---------- 자주 묻는 질문 ----------
  (C.faq || []).forEach((f, i) => {
   const d = make('details', 'faq-item'); if (i === 0) d.open = true;
-  const answer = (!unknown(C.parking) && f.q.includes('주차')) ? C.parking : f.a;
-  d.append(make('summary', '', f.q), make('p', '', answer));
+  d.append(make('summary', '', f.q), make('p', '', f.a));
   $('#faq-list').append(d);
  });
 
  // ---------- 주소 복사 / 지도 ----------
- $('#copy-address').onclick = async () => {
+ const copy = async (text, done) => {
   const s = $('#copy-status');
-  try { await navigator.clipboard.writeText(C.address); s.textContent = '주소를 복사했습니다.'; }
-  catch { s.textContent = '주소: ' + C.address; }
+  try { await navigator.clipboard.writeText(text); s.textContent = done; }
+  catch { s.textContent = text; }
  };
+ $('#copy-address').onclick = () => copy(C.address, '숙소 주소를 복사했습니다.');
+ $('#copy-parking').onclick = () => copy(C.parkingAddress, '주차장 주소를 복사했습니다. 내비게이션에 붙여 넣어 주세요.');
  $('#map-load').onclick = () => {
   const lat = C.latitude, lon = C.longitude, d = 0.012;
   const f = make('iframe');

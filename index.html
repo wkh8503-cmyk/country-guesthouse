@@ -48,7 +48,7 @@
   <div class="hero-copy">
    <p class="hero-place">충남 공주 · 정안면</p>
    <h1 id="hero-title">들판을 바라보는 낮,<br>불빛 아래 머무는 밤</h1>
-   <p class="hero-lead">객실 세 곳의 작은 시골집. 객실마다 취사와 개별 바비큐가 가능합니다.</p>
+   <p class="hero-lead">객실 세 곳의 작은 시골집. 객실마다 취사와 개별 바비큐가 가능하고, 무료 주차할 수 있습니다.</p>
    <div class="hero-actions">
     <a href="https://map.naver.com/p/entry/place/1317281004" class="btn btn-ember" data-booking>예약 가능 날짜 보기 ↗</a>
     <a class="btn btn-glass" href="#rooms">객실 둘러보기</a>
@@ -113,7 +113,8 @@
     <dl class="info-list">
      <div><dt>체크인</dt><dd data-text="checkIn"></dd></div>
      <div><dt>체크아웃</dt><dd data-text="checkOut"></dd></div>
-     <div><dt>주차</dt><dd id="parking"></dd></div>
+     <div><dt>주차</dt><dd><span id="parking"></span><small class="dd-sub">내비 주소 <span id="parking-address-short"></span></small></dd></div>
+     <div><dt>반려견</dt><dd id="pets"></dd></div>
      <div><dt>이용 규칙</dt><dd id="rules"></dd></div>
      <div><dt>환불 규정</dt><dd id="refund"></dd></div>
      <div><dt>요금</dt><dd>날짜별 요금은 <a href="https://map.naver.com/p/entry/place/1317281004" data-booking>네이버 예약</a>에서 확인</dd></div>
@@ -138,6 +139,12 @@
      <a href="tel:01057795385" class="btn btn-line" data-phone>전화&nbsp;문의</a>
     </div>
     <p class="note" id="copy-status" role="status"></p>
+    <div class="parking-box">
+     <h3>주차 · 진입 안내</h3>
+     <p class="parking-addr"><span>내비게이션 주차장 주소</span><strong id="parking-address"></strong></p>
+     <p id="road-note"></p>
+     <button class="btn btn-line btn-sm" type="button" id="copy-parking">주차장 주소 복사</button>
+    </div>
    </div>
    <div class="map reveal" id="map"><button type="button" class="map-load" id="map-load"><strong>지도 불러오기</strong><span>OpenStreetMap 지도를 표시합니다</span></button></div>
   </div>

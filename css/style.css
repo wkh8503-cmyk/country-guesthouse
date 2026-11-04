@@ -187,6 +187,14 @@ body.no-scroll{overflow:hidden}
 .faq-item p{padding:0 2px 20px;color:var(--muted)}
 
 /* 오시는 길 */
+.dd-sub{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:2px}
+.parking-box{margin-top:30px;padding:22px 22px 24px;background:#fff;border-radius:var(--r);border-left:3px solid var(--ember)}
+.parking-box h3{font:600 18px/1.4 var(--serif);margin-bottom:12px}
+.parking-addr{display:flex;flex-direction:column;margin-bottom:10px}
+.parking-addr span{font-size:13px;color:var(--muted)}
+.parking-addr strong{font-size:17px;font-weight:600}
+.parking-box p{font-size:15px;color:var(--muted)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:14px;margin-top:14px}
 .location-section{background:#e9e7dc}
 .location-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
 @media(max-width:900px){.location-grid{grid-template-columns:1fr;gap:36px}}
