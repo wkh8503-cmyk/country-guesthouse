@@ -10,10 +10,13 @@
  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
  // 사진 태그: 작은 사진(thumbs) + 원본을 srcset 으로 연결
+ // 썸네일은 긴 변 기준 640px 이하로 축소(확대 없음) — 실제 파일 크기와 같은 계산
+ const thumbWidth = p => Math.round(p.width * Math.min(1, 640 / Math.max(p.width, p.height)));
  function setImg(img, p, sizes) {
   if (!p) return img;
   img.src = thumb(p);
-  img.srcset = `${thumb(p)} ${Math.min(640, p.width)}w, ${p.path} ${p.width}w`;
+  const tw = thumbWidth(p);
+  img.srcset = tw < p.width ? `${thumb(p)} ${tw}w, ${p.path} ${p.width}w` : `${thumb(p)} ${tw}w`;
   img.sizes = sizes || '100vw';
   img.alt = p.description; img.width = p.width; img.height = p.height;
   return img;
@@ -100,10 +103,13 @@
   const tags = make('ul', 'room-tags'); tags.setAttribute('aria-label', '객실 시설');
   room.amenities.split('·').map(s => s.trim()).filter(Boolean).forEach(t => tags.append(make('li', '', t)));
   const dl = make('dl', 'room-facts');
-  [['인원', room.capacity], ['요금', unknown(room.price) ? '날짜별 상이 · 예약 화면에서 확인' : room.price]]
+  // 요금은 날짜별로 달라 카드마다 반복하지 않음(아래 공통 안내). 확인된 고정 요금이 있으면 표시
+  [['인원', room.capacity], ...(unknown(room.price) ? [] : [['요금', room.price]])]
    .forEach(([k, v]) => { const d = make('div'); d.append(make('dt', '', k), make('dd', '', v)); dl.append(d); });
   body.append(dl, tags);
-  const link = make('a', 'btn btn-dark room-book', `${room.name} 예약하기 ↗`);
+  const link = make('a', 'btn btn-dark room-book', `${room.name} 예약하기`);
+  const arrow = make('span', '', ' ↗'); arrow.setAttribute('aria-hidden', 'true');
+  link.append(arrow, make('span', 'sr', ' (새 창)'));
   Object.assign(link, { href: room.bookingUrl || C.bookingUrl, target: '_blank', rel: 'noopener noreferrer' });
   body.append(link);
   card.append(body);
@@ -137,7 +143,10 @@
   renderGallery(); if (focus) tabs[i].focus();
  }
  categories.forEach(([key, label], i) => {
-  const t = make('button', '', `${label} ${groupOf(key).length}`); t.type = 'button'; t.id = 'tab-' + key;
+  const n = groupOf(key).length;
+  const t = make('button', ''); t.type = 'button'; t.id = 'tab-' + key;
+  t.append(label + ' ', make('span', 'tab-count', String(n)));
+  t.setAttribute('aria-label', `${label}, 사진 ${n}장`);
   t.setAttribute('role', 'tab'); t.setAttribute('aria-controls', 'gallery-list');
   t.onclick = () => selectTab(i);
   t.onkeydown = e => {
@@ -176,18 +185,49 @@
   const credit = make('a', 'map-credit', '큰 지도 보기 ↗');
   Object.assign(credit, { href: `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=16/${lat}/${lon}`, target: '_blank', rel: 'noopener noreferrer' });
   $('#map').append(credit);
+  credit.focus();   // 눌렀던 버튼이 사라지므로 포커스를 지도 링크로 옮김
  };
 
  // ---------- 헤더 / 모바일 메뉴 ----------
  const header = $('.site-header'), toggle = $('.menu-toggle'), nav = $('#site-nav');
+ const behind = [$('#main'), $('.site-footer'), $('#mobile-bar')];
+ let savedY = 0;
  const setMenu = open => {
+  if (open === header.classList.contains('menu-open')) return;
   toggle.setAttribute('aria-expanded', String(open));
   toggle.querySelector('.sr').textContent = open ? '메뉴 닫기' : '메뉴 열기';
-  header.classList.toggle('menu-open', open); document.body.classList.toggle('no-scroll', open);
+  header.classList.toggle('menu-open', open);
+  // 메뉴가 열린 동안 뒤 내용은 클릭·포커스·읽기 불가(inert), 스크롤 위치는 닫을 때 복원
+  behind.forEach(el => { el.inert = open; });
+  if (open) { savedY = scrollY; document.body.style.top = `-${savedY}px`; document.body.classList.add('no-scroll'); }
+  else { document.body.classList.remove('no-scroll'); document.body.style.top = ''; scrollTo({ top: savedY, behavior: 'instant' }); }
  };
+ header.addEventListener('keydown', e => {
+  if (e.key !== 'Tab' || !header.classList.contains('menu-open')) return;
+  const items = [toggle, ...nav.querySelectorAll('a')];
+  const first = items[0], last = items[items.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+ });
+ matchMedia('(min-width: 961px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
  toggle.onclick = () => setMenu(toggle.getAttribute('aria-expanded') !== 'true');
- nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+ nav.addEventListener('click', e => {
+  const a = e.target.closest('a'); if (!a) return;
+  const hash = a.getAttribute('href');
+  setMenu(false);
+  if (hash && hash.startsWith('#')) {
+   const target = document.querySelector(hash);
+   if (target) {
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    history.replaceState(null, '', hash);
+    target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true });
+   }
+  }
+ });
  document.addEventListener('keydown', e => { if (e.key === 'Escape' && header.classList.contains('menu-open')) { setMenu(false); toggle.focus(); } });
+ // 글자 확대 등으로 헤더 높이가 바뀌면 스크롤 위치·메뉴 높이 계산에 반영
+ if ('ResizeObserver' in window) new ResizeObserver(() => document.documentElement.style.setProperty('--header', header.offsetHeight + 'px')).observe(header);
  const hero = $('.hero');
  const onScroll = () => {
   const past = window.scrollY > hero.offsetHeight - 80;
@@ -197,10 +237,5 @@
  };
  addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
- // ---------- 절제된 등장 효과 ----------
- if (!reduceMotion && 'IntersectionObserver' in window) {
-  document.documentElement.classList.add('motion');
-  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { rootMargin: '0px 0px -8% 0px' });
-  $$('.reveal').forEach(e => io.observe(e));
- }
+ // 등장 효과는 CSS(스크롤 연동)만 사용 — JS가 늦거나 실패해도 본문이 숨겨지지 않음
 })();
