@@ -4,7 +4,7 @@ window.SITE_CONFIG = {
  bookingUrl: 'https://map.naver.com/p/entry/place/1317281004',
  placeUrl: 'https://map.naver.com/p/entry/place/1317281004',
  mobilePlaceUrl: 'https://m.place.naver.com/accommodation/1317281004/home',
- heroImage: 'images/common/exterior-07.jpg',
+ heroImage: 'images/common/exterior-09.jpg',
  address: '확인 필요', latitude: 36.6136474, longitude: 127.1198802,
  checkIn: '확인 필요', checkOut: '확인 필요', rules: '확인 필요', refundPolicy: '확인 필요',
  rooms: [
@@ -13,3 +13,4 @@ window.SITE_CONFIG = {
   {name:'103호 C',key:'103호C',image:'images/room-103c/overview-01.jpg',capacity:'확인 필요',price:'확인 필요',amenities:'확인 필요',bookingUrl:''}
  ]
 };
+
