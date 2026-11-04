@@ -1,247 +1,29 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>솔바람 시골집 | 시골집 손님방</title>
-  <meta name="description" content="마당 넓은 시골집 손님방. 텃밭 체험, 바비큐, 아궁이 온돌이 있는 조용한 시골 숙소입니다.">
-  <meta name="theme-color" content="#5b4630">
-  <meta property="og:title" content="솔바람 시골집">
-  <meta property="og:description" content="소나무 바람 소리에 잠드는 하룻밤">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">본문 바로가기</a>
-
-  <!-- ===== 상단 메뉴 ===== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="logo" href="#top" data-bind="name">솔바람 시골집</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
-        <ul>
-          <li><a href="#about">숙소 소개</a></li>
-          <li><a href="#rooms">객실</a></li>
-          <li><a href="#facilities">즐길거리</a></li>
-          <li><a href="#around">주변 관광</a></li>
-          <li><a href="#info">이용 안내</a></li>
-          <li><a href="#location">오시는 길</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a class="nav-cta" href="#contact">예약 문의</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- ===== 첫 화면 ===== -->
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="hero-bg" id="hero-bg" aria-hidden="true">
-        <svg class="hero-scene" viewBox="0 100 1200 500" preserveAspectRatio="xMidYMax slice" role="presentation">
-          <circle cx="930" cy="275" r="55" fill="#fbe7c6" opacity=".95"/>
-          <path d="M0 380 Q200 260 420 340 T820 300 T1200 330 V600 H0Z" fill="#9aa77a"/>
-          <path d="M0 440 Q260 360 520 420 T1200 400 V600 H0Z" fill="#6f7f52"/>
-          <!-- 소나무 -->
-          <g fill="#3f4d33">
-            <path d="M120 470 l40-110 l40 110z"/><path d="M135 420 l25-80 l25 80z"/>
-            <path d="M1040 460 l45-130 l45 130z"/><path d="M1058 400 l27-90 l27 90z"/>
-            <path d="M980 480 l30-80 l30 80z"/>
-          </g>
-          <!-- 한옥 지붕 집 -->
-          <g transform="translate(470 360)">
-            <path d="M-40 60 Q130 0 300 60 L280 70 Q130 25 -20 70Z" fill="#4a3a2a"/>
-            <rect x="10" y="68" width="240" height="90" fill="#efe1c6"/>
-            <rect x="10" y="68" width="240" height="10" fill="#7a5c3e"/>
-            <g fill="#7a5c3e"><rect x="10" y="68" width="8" height="90"/><rect x="242" y="68" width="8" height="90"/><rect x="126" y="68" width="8" height="90"/></g>
-            <rect x="40" y="95" width="60" height="45" fill="#f7efd9" stroke="#7a5c3e" stroke-width="3"/>
-            <rect x="160" y="95" width="60" height="45" fill="#f7efd9" stroke="#7a5c3e" stroke-width="3"/>
-            <path d="M70 95v45M40 117h60M190 95v45M160 117h60" stroke="#7a5c3e" stroke-width="2"/>
-            <rect x="0" y="155" width="260" height="10" fill="#5b4630"/>
-          </g>
-          <path d="M0 520 Q300 480 600 510 T1200 500 V600 H0Z" fill="#5a6a42"/>
-        </svg>
-      </div>
-      <div class="hero-content container">
-        <p class="hero-eyebrow">시골집 손님방</p>
-        <h1 id="hero-title" data-bind="name">솔바람 시골집</h1>
-        <p class="hero-tagline" data-bind="tagline"></p>
-        <p class="hero-sub" data-bind="subTagline"></p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">예약 문의</a>
-          <a class="btn btn-ghost" href="#rooms">객실 둘러보기</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 숙소 소개 ===== -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-media" id="about-media"></div>
-        <div class="about-text">
-          <p class="section-eyebrow">숙소 소개</p>
-          <h2 id="about-title" class="section-title" data-bind="about.title">숙소 소개</h2>
-          <div id="about-paragraphs"></div>
-          <ul class="highlights" id="about-highlights"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 객실 안내 ===== -->
-    <section class="section section-alt" id="rooms" aria-labelledby="rooms-title">
-      <div class="container">
-        <p class="section-eyebrow">객실 안내</p>
-        <h2 id="rooms-title" class="section-title">머무실 방을 골라 보세요</h2>
-        <div class="room-grid" id="room-list"></div>
-
-        <!-- 요금 계산기 -->
-        <div class="calculator" role="group" aria-labelledby="calc-title">
-          <h3 id="calc-title">예상 요금 계산기</h3>
-          <div id="calc-form" class="calc-form">
-            <div class="field">
-              <label for="calc-room">객실</label>
-              <select id="calc-room"></select>
-            </div>
-            <div class="field">
-              <label for="calc-weekday">평일 박수 <small>(일~목)</small></label>
-              <input id="calc-weekday" type="number" min="0" max="30" value="1" inputmode="numeric">
-            </div>
-            <div class="field">
-              <label for="calc-weekend">주말 박수 <small>(금·토)</small></label>
-              <input id="calc-weekend" type="number" min="0" max="30" value="0" inputmode="numeric">
-            </div>
-            <div class="field">
-              <label for="calc-extra">추가 인원</label>
-              <input id="calc-extra" type="number" min="0" max="10" value="0" inputmode="numeric">
-            </div>
-          </div>
-          <p class="calc-result" aria-live="polite">
-            예상 금액 <strong id="calc-total">0원</strong>
-            <span class="calc-detail" id="calc-detail"></span>
-          </p>
-          <p class="calc-note">※ 실제 요금은 성수기·공휴일에 따라 달라질 수 있어요. 정확한 금액은 예약 문의 시 안내해 드립니다.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 시설 · 즐길거리 ===== -->
-    <section class="section" id="facilities" aria-labelledby="fac-title">
-      <div class="container">
-        <p class="section-eyebrow">시설 · 즐길거리</p>
-        <h2 id="fac-title" class="section-title">시골에서만 누리는 것들</h2>
-        <ul class="feature-grid" id="facility-list"></ul>
-
-        <h3 class="sub-title">사계절 풍경</h3>
-        <ul class="gallery" id="gallery-list"></ul>
-      </div>
-    </section>
-
-    <!-- ===== 주변 관광지 ===== -->
-    <section class="section section-alt" id="around" aria-labelledby="around-title">
-      <div class="container">
-        <p class="section-eyebrow">주변 관광지</p>
-        <h2 id="around-title" class="section-title">가까운 나들이 장소</h2>
-        <ul class="attraction-list" id="attraction-list"></ul>
-      </div>
-    </section>
-
-    <!-- ===== 이용 안내 ===== -->
-    <section class="section" id="info" aria-labelledby="info-title">
-      <div class="container">
-        <p class="section-eyebrow">이용 안내</p>
-        <h2 id="info-title" class="section-title">편안한 머무름을 위해</h2>
-        <div class="info-grid">
-          <article class="info-card">
-            <h3>입실 · 퇴실</h3>
-            <dl class="time-list">
-              <div><dt>체크인</dt><dd data-bind="checkIn"></dd></div>
-              <div><dt>체크아웃</dt><dd data-bind="checkOut"></dd></div>
-            </dl>
-          </article>
-          <article class="info-card">
-            <h3>환불 규정</h3>
-            <ul class="check-list" id="refund-list"></ul>
-          </article>
-          <article class="info-card">
-            <h3>주의사항</h3>
-            <ul class="check-list" id="notice-list"></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 오시는 길 ===== -->
-    <section class="section section-alt" id="location" aria-labelledby="loc-title">
-      <div class="container location-grid">
-        <div class="map-box" id="map-box"></div>
-        <div>
-          <p class="section-eyebrow">오시는 길</p>
-          <h2 id="loc-title" class="section-title">찾아오시는 길</h2>
-          <dl class="loc-list">
-            <div><dt>주소</dt><dd data-bind="location.address"></dd></div>
-            <div><dt>자가용</dt><dd data-bind="location.car"></dd></div>
-            <div><dt>대중교통</dt><dd data-bind="location.bus"></dd></div>
-          </dl>
-          <div class="loc-actions">
-            <button class="btn btn-outline" type="button" id="copy-address">주소 복사</button>
-            <a class="btn btn-outline" id="map-link" href="#" target="_blank" rel="noopener">지도 앱에서 보기</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 자주 묻는 질문 ===== -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="container narrow">
-        <p class="section-eyebrow">자주 묻는 질문</p>
-        <h2 id="faq-title" class="section-title">궁금한 점이 있으신가요?</h2>
-        <div class="accordion" id="faq-list"></div>
-      </div>
-    </section>
-
-    <!-- ===== 예약 문의 ===== -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="container narrow center">
-        <p class="section-eyebrow">예약 문의</p>
-        <h2 id="contact-title" class="section-title">편한 방법으로 연락 주세요</h2>
-        <p class="contact-hours" data-bind="contact.hours"></p>
-        <div class="contact-buttons">
-          <a class="contact-btn phone" id="btn-phone" href="#">
-            <span class="contact-icon" aria-hidden="true">📞</span>
-            <span><strong>전화 문의</strong><small data-bind="contact.phone"></small></span>
-          </a>
-          <a class="contact-btn kakao" id="btn-kakao" href="#" target="_blank" rel="noopener">
-            <span class="contact-icon" aria-hidden="true">💬</span>
-            <span><strong>카카오톡 문의</strong><small>채널로 메시지 보내기</small></span>
-          </a>
-          <a class="contact-btn naver" id="btn-naver" href="#" target="_blank" rel="noopener">
-            <span class="contact-icon" aria-hidden="true">📅</span>
-            <span><strong>네이버 예약</strong><small>날짜 확인 · 바로 예약</small></span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ===== 맨 아래 ===== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-name" data-bind="name"></p>
-      <p id="footer-info"></p>
-      <p class="footer-copy">© <span id="year"></span> <span data-bind="footer.copyright"></span>. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- 모바일 하단 고정 예약 버튼 -->
-  <a class="sticky-cta" href="#contact">예약 문의하기</a>
-
-  <script src="js/config.js"></script>
-  <script src="js/main.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>시골집손님방 | 객실과 예약 안내</title>
+<meta name="description" content="시골집손님방의 실제 객실과 마당 사진을 둘러보세요. 101호 A, 102호 B, 103호 C 객실 안내와 네이버 예약·전화 문의.">
+<meta name="theme-color" content="#283f35"><meta property="og:type" content="website">
+<meta property="og:title" content="시골집손님방 | 잠시 쉬어 가는, 시골의 하루">
+<meta property="og:description" content="객실과 마당, 바비큐·불멍 풍경을 사진으로 만나보세요. 예약은 네이버 플레이스에서 확인하실 수 있습니다.">
+<meta property="og:url" content="https://wkh8503-cmyk.github.io/country-guesthouse/">
+<meta property="og:image" content="https://wkh8503-cmyk.github.io/country-guesthouse/images/common/exterior-07.jpg">
+<meta property="og:image:alt" content="시골집손님방 외관과 마당">
+<link rel="canonical" href="https://wkh8503-cmyk.github.io/country-guesthouse/">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<a class="skip" href="#main">본문 바로가기</a>
+<header><a class="brand" href="#">시골집손님방<span>COUNTRY GUESTHOUSE</span></a><nav aria-label="주요 메뉴"><a href="#rooms">객실</a><a href="#gallery">풍경</a><a href="#info">이용 안내</a><a href="#location">오시는 길</a></nav><a class="button small" data-booking>예약하기 ↗</a></header>
+<main id="main">
+<section class="hero"><img id="hero-image" alt=""><div class="hero-shade"></div><div class="hero-copy"><p class="eyebrow">시골집손님방</p><h1>잠시 쉬어 가는,<br>시골의 하루</h1><p>마당의 풍경부터 아늑한 객실까지.<br>당신의 다음 쉼을 만나보세요.</p><a class="button cream" href="#rooms">객실 둘러보기 ↓</a></div><span class="hero-foot">천천히 머물고 싶은 곳</span></section>
+<section class="intro wrap"><p class="eyebrow">A LITTLE PAUSE</p><h2>풍경을 바라보며,<br>하루의 속도를 늦추세요.</h2><p>시골집손님방의 객실과 바깥 풍경을 사진으로 소개합니다.<br>마음에 드는 공간을 찾고, 네이버에서 예약을 확인해 보세요.</p></section>
+<section class="section wrap" id="rooms"><div class="section-head"><div><p class="eyebrow">OUR ROOMS</p><h2>머무를 공간</h2></div><p>사진을 누르면 객실을 더 자세히 볼 수 있어요.</p></div><div class="rooms" id="room-list"></div><p class="note">정확한 요금과 예약 가능 날짜는 네이버 플레이스의 예약 메뉴에서 확인해 주세요.</p></section>
+<section class="gallery-section section" id="gallery"><div class="wrap"><div class="section-head"><div><p class="eyebrow">MOMENTS HERE</p><h2>시골집의 풍경</h2></div><p>숙소에서 담은 소소한 순간들</p></div><div class="tabs" id="gallery-tabs" role="tablist" aria-label="사진 분류"></div><div class="gallery" id="gallery-list" role="tabpanel"></div><p class="note">사진은 숙소의 모습을 소개합니다. 체험·음식 제공 여부와 이용 조건은 예약 전 문의해 주세요.</p></div></section>
+<section class="section wrap" id="info"><p class="eyebrow">GOOD TO KNOW</p><h2>이용 안내</h2><div class="info-grid"><article><h3>입실 · 퇴실</h3><p>체크인 <strong id="check-in"></strong></p><p>체크아웃 <strong id="check-out"></strong></p></article><article><h3>예약과 요금</h3><p>예상 금액은 네이버 예약에서 확인해 주세요.</p><a data-booking>네이버에서 확인 ↗</a></article><article><h3>이용 규칙 · 환불</h3><p id="rules"></p><p>자세한 조건은 예약 전 숙소에 문의해 주세요.</p></article></div></section>
+<section class="location-section section" id="location"><div class="wrap location-grid"><div><p class="eyebrow">FIND US</p><h2>찾아오시는 길</h2><p class="address">주소 <strong id="address"></strong></p><p>네이버 지도에서 숙소 위치와 경로를 확인하세요.</p><div class="actions"><a class="button" id="directions" target="_blank" rel="noopener noreferrer">길찾기 ↗</a><a class="button outline" data-phone>전화 문의</a></div></div><a class="location-card" id="location-link" target="_blank" rel="noopener noreferrer"><span class="pin">⌖</span><h3>시골집손님방</h3><p>네이버 지도에서 위치 보기 ↗</p><small>실제 지도는 링크에서 확인하실 수 있습니다.</small></a></div></section>
+<section class="contact section wrap" id="contact"><p class="eyebrow">PLAN YOUR STAY</p><h2>다음 쉼을 준비하세요.</h2><p>플레이스의 ‘예약’ 버튼에서 예약을 진행해 주세요.</p><div class="actions"><a class="button" data-booking>네이버 예약 ↗</a><a class="button outline" data-phone>010-5779-5385</a></div></section>
+</main><footer class="wrap"><strong>시골집손님방</strong><p>전화 <a data-phone>010-5779-5385</a></p><small>© <span id="year"></span> 시골집손님방</small></footer>
+<div class="mobile-bar"><a data-booking>네이버 예약 ↗</a><a data-phone>전화하기</a></div>
+<dialog id="lightbox" aria-label="숙소 사진 크게 보기"><button class="close" type="button" aria-label="사진 닫기">×</button><button class="previous" type="button" aria-label="이전 사진">‹</button><figure><img id="large-photo" alt=""><figcaption id="photo-caption"></figcaption><p id="photo-count"></p></figure><button class="next" type="button" aria-label="다음 사진">›</button></dialog>
+<script src="js/config.js"></script><script src="js/photos.js"></script><script src="js/main.js"></script>
+</body></html>

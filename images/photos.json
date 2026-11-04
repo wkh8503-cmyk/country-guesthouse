@@ -1,0 +1,826 @@
+{
+  "source": "네이버 플레이스·네이버 예약에 업체가 직접 등록한 사진 (2026-11-03 백업)",
+  "excluded": "인물·동물 사진(초상권), 안내·콜라주(기존 문구·요금 포함), GIF",
+  "photos": [
+    {
+      "path": "images/room-101a/overview-01.jpg",
+      "room": "101호A",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대와 테이블이 보이는 101호A 실내 전경",
+      "width": 720,
+      "height": 905,
+      "bytes": 56130
+    },
+    {
+      "path": "images/room-101a/overview-02.jpg",
+      "room": "101호A",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대·소파·식탁이 함께 보이는 객실 전경",
+      "width": 800,
+      "height": 600,
+      "bytes": 36874
+    },
+    {
+      "path": "images/room-101a/overview-03.jpg",
+      "room": "101호A",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대·TV·소파 객실 전경",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 121313
+    },
+    {
+      "path": "images/room-101a/bedroom-01.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "101호A 소파 공간",
+      "width": 720,
+      "height": 960,
+      "bytes": 53275
+    },
+    {
+      "path": "images/room-101a/bedroom-02.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "소파와 거실 벽면",
+      "width": 720,
+      "height": 960,
+      "bytes": 53212
+    },
+    {
+      "path": "images/room-101a/bedroom-03.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "TV 및 장식장",
+      "width": 800,
+      "height": 800,
+      "bytes": 65042
+    },
+    {
+      "path": "images/room-101a/bedroom-04.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "침대 위 계절 소품",
+      "width": 750,
+      "height": 750,
+      "bytes": 54224
+    },
+    {
+      "path": "images/room-101a/bedroom-05.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "현관·전신거울·의자",
+      "width": 800,
+      "height": 800,
+      "bytes": 57744
+    },
+    {
+      "path": "images/room-101a/detail-01.jpg",
+      "room": "101호A",
+      "category": "detail",
+      "categoryKo": "실내소품",
+      "description": "101호A 거울과 벽 장식",
+      "width": 720,
+      "height": 961,
+      "bytes": 99202
+    },
+    {
+      "path": "images/room-101a/bathroom-01.jpg",
+      "room": "101호A",
+      "category": "bathroom",
+      "categoryKo": "욕실",
+      "description": "세면대·변기·샤워공간 욕실",
+      "width": 720,
+      "height": 540,
+      "bytes": 27899
+    },
+    {
+      "path": "images/room-102b/overview-01.jpg",
+      "room": "102호B",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "캐노피 침대와 TV 객실 전경",
+      "width": 858,
+      "height": 644,
+      "bytes": 37319
+    },
+    {
+      "path": "images/room-102b/overview-02.jpg",
+      "room": "102호B",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "객실 내부와 현관 방향 전경",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 92351
+    },
+    {
+      "path": "images/room-102b/overview-03.jpg",
+      "room": "102호B",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대·TV 방향 객실 전경",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 94879
+    },
+    {
+      "path": "images/room-102b/bedroom-01.jpg",
+      "room": "102호B",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "침대와 인형 소품",
+      "width": 974,
+      "height": 731,
+      "bytes": 49913
+    },
+    {
+      "path": "images/room-102b/bedroom-02.jpg",
+      "room": "102호B",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "거울·화분·실내 반사 전경",
+      "width": 856,
+      "height": 1144,
+      "bytes": 56202
+    },
+    {
+      "path": "images/room-102b/bedroom-03.jpg",
+      "room": "102호B",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "실물 네온 문구 장식",
+      "width": 990,
+      "height": 739,
+      "bytes": 47040
+    },
+    {
+      "path": "images/room-102b/detail-01.jpg",
+      "room": "102호B",
+      "category": "detail",
+      "categoryKo": "실내소품",
+      "description": "102호B 식물과 실내 코너",
+      "width": 720,
+      "height": 962,
+      "bytes": 31603
+    },
+    {
+      "path": "images/room-102b/kitchen-01.jpg",
+      "room": "102호B",
+      "category": "kitchen",
+      "categoryKo": "주방식사",
+      "description": "102호B 식탁·냉장고·출입문 공간",
+      "width": 720,
+      "height": 343,
+      "bytes": 17205
+    },
+    {
+      "path": "images/room-103c/overview-01.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "103호C 침대와 TV 전경",
+      "width": 1200,
+      "height": 800,
+      "bytes": 95565
+    },
+    {
+      "path": "images/room-103c/overview-02.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "103호C 방과 문이 함께 보이는 실내 전경",
+      "width": 1200,
+      "height": 600,
+      "bytes": 46852
+    },
+    {
+      "path": "images/room-103c/overview-03.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "103호C 실내 통로와 취사 공간 전경",
+      "width": 1200,
+      "height": 800,
+      "bytes": 58804
+    },
+    {
+      "path": "images/room-103c/overview-04.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대·TV·창문 전경",
+      "width": 800,
+      "height": 601,
+      "bytes": 41917
+    },
+    {
+      "path": "images/room-103c/overview-05.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "침대와 TV 방향 객실 전경",
+      "width": 720,
+      "height": 480,
+      "bytes": 41666
+    },
+    {
+      "path": "images/room-103c/overview-06.jpg",
+      "room": "103호C",
+      "category": "overview",
+      "categoryKo": "객실전경",
+      "description": "커튼으로 구분된 넓은 실내 전경",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 129067
+    },
+    {
+      "path": "images/room-103c/bedroom-01.jpg",
+      "room": "103호C",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "기타·거울·실내 장식",
+      "width": 966,
+      "height": 1288,
+      "bytes": 112319
+    },
+    {
+      "path": "images/room-103c/bedroom-02.jpg",
+      "room": "103호C",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "TV 및 침실 주변",
+      "width": 900,
+      "height": 1200,
+      "bytes": 115338
+    },
+    {
+      "path": "images/room-103c/detail-01.jpg",
+      "room": "103호C",
+      "category": "detail",
+      "categoryKo": "실내소품",
+      "description": "103호C 거울·문·수납장 주변",
+      "width": 720,
+      "height": 1073,
+      "bytes": 64681
+    },
+    {
+      "path": "images/room-103c/kitchen-01.jpg",
+      "room": "103호C",
+      "category": "kitchen",
+      "categoryKo": "주방식사",
+      "description": "테이블·의자·행거가 있는 공간",
+      "width": 900,
+      "height": 1200,
+      "bytes": 124889
+    },
+    {
+      "path": "images/room-103c/bathroom-01.jpg",
+      "room": "103호C",
+      "category": "bathroom",
+      "categoryKo": "욕실",
+      "description": "세면대·변기·샤워공간 욕실",
+      "width": 720,
+      "height": 1129,
+      "bytes": 37870
+    },
+    {
+      "path": "images/room-103c/exterior-01.jpg",
+      "room": "103호C",
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "103호C 야간 외관과 마당",
+      "width": 720,
+      "height": 539,
+      "bytes": 36611
+    },
+    {
+      "path": "images/room-103c/exterior-02.jpg",
+      "room": "103호C",
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "야간 마당과 텐트·사람이 보이는 사진",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 249169
+    },
+    {
+      "path": "images/room-103c/exterior-03.jpg",
+      "room": "103호C",
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "야간 건물 외관과 야외 테이블",
+      "width": 917,
+      "height": 647,
+      "bytes": 44302
+    },
+    {
+      "path": "images/room-103c/exterior-04.jpg",
+      "room": "103호C",
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "들판을 향한 숙소 주변 풍경",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 329286
+    },
+    {
+      "path": "images/room-103c/bbq-01.jpg",
+      "room": "103호C",
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "화로 불멍 실물 사진",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 100248
+    },
+    {
+      "path": "images/common/exterior-01.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "흔들의자에 앉은 인물과 야간 건물 외관",
+      "width": 800,
+      "height": 600,
+      "bytes": 62608
+    },
+    {
+      "path": "images/common/exterior-02.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "식물과 조명이 있는 야간 테라스",
+      "width": 800,
+      "height": 600,
+      "bytes": 65457
+    },
+    {
+      "path": "images/common/exterior-03.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "꽃이 핀 마당 길과 바깥 풍경",
+      "width": 400,
+      "height": 553,
+      "bytes": 58464
+    },
+    {
+      "path": "images/common/exterior-04.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "지붕 아래 야외 좌석과 마당",
+      "width": 800,
+      "height": 600,
+      "bytes": 71612
+    },
+    {
+      "path": "images/common/exterior-05.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "식물이 둘러싼 건물 출입구와 마당",
+      "width": 400,
+      "height": 534,
+      "bytes": 41751
+    },
+    {
+      "path": "images/common/exterior-06.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "건물 앞 테라스와 자전거",
+      "width": 800,
+      "height": 1067,
+      "bytes": 125016
+    },
+    {
+      "path": "images/common/exterior-07.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "토끼 모양 장식이 놓인 화단",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 428244
+    },
+    {
+      "path": "images/common/exterior-08.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "흔들의자와 조명이 있는 야간 외관",
+      "width": 800,
+      "height": 1067,
+      "bytes": 97853
+    },
+    {
+      "path": "images/common/exterior-09.jpg",
+      "room": null,
+      "category": "exterior",
+      "categoryKo": "외관마당",
+      "description": "낮에 촬영한 건물 외관과 마당",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 192665
+    },
+    {
+      "path": "images/common/bbq-01.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "그릴 위에서 굽는 꼬치와 음식",
+      "width": 800,
+      "height": 1067,
+      "bytes": 108199
+    },
+    {
+      "path": "images/common/bbq-02.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야간 야외 그릴의 음식과 조리 도구",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 157490
+    },
+    {
+      "path": "images/common/bbq-03.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "석쇠 위에서 굽는 고기",
+      "width": 966,
+      "height": 1287,
+      "bytes": 393146
+    },
+    {
+      "path": "images/common/bbq-04.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "옥수수와 고기를 굽는 그릴",
+      "width": 966,
+      "height": 1287,
+      "bytes": 379831
+    },
+    {
+      "path": "images/common/bbq-05.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야외 그릴에서 굽는 고기",
+      "width": 966,
+      "height": 1287,
+      "bytes": 376628
+    },
+    {
+      "path": "images/common/bbq-06.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "매직파이어 불멍용품 포장지 클로즈업",
+      "width": 400,
+      "height": 533,
+      "bytes": 29059
+    },
+    {
+      "path": "images/common/bbq-07.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "석쇠 위에서 구워지는 고기",
+      "width": 800,
+      "height": 1067,
+      "bytes": 187669
+    },
+    {
+      "path": "images/common/bbq-08.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "불멍 화로가 놓인 야외 바비큐 공간",
+      "width": 800,
+      "height": 1067,
+      "bytes": 46410
+    },
+    {
+      "path": "images/common/bbq-09.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "불멍 화로를 돌보는 인물",
+      "width": 800,
+      "height": 1067,
+      "bytes": 47921
+    },
+    {
+      "path": "images/common/bbq-10.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야간 야외 테이블과 불멍 화로",
+      "width": 800,
+      "height": 599,
+      "bytes": 57389
+    },
+    {
+      "path": "images/common/bbq-11.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야외 테이블에 앉은 사람들과 불멍 화로",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 130355
+    },
+    {
+      "path": "images/common/bbq-12.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야간 야외 공간의 인물과 불멍 화로",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 111709
+    },
+    {
+      "path": "images/common/bbq-13.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "야간 불멍 화로와 불꽃",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 82068
+    },
+    {
+      "path": "images/common/bbq-14.jpg",
+      "room": null,
+      "category": "bbq",
+      "categoryKo": "바비큐불멍",
+      "description": "바비큐 그릴과 불멍 화로가 있는 야외 공간",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 125721
+    },
+    {
+      "path": "images/common/nature-01.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "자전거 두 대와 함께 선 두 사람",
+      "width": 400,
+      "height": 533,
+      "bytes": 38013
+    },
+    {
+      "path": "images/common/nature-02.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "산책로 옆에 세워진 자전거들",
+      "width": 400,
+      "height": 533,
+      "bytes": 44115
+    },
+    {
+      "path": "images/common/nature-03.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "분홍 꽃이 핀 화단과 발끝",
+      "width": 800,
+      "height": 1066,
+      "bytes": 204721
+    },
+    {
+      "path": "images/common/nature-04.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "나무와 푸른 초목의 풍경",
+      "width": 400,
+      "height": 622,
+      "bytes": 73149
+    },
+    {
+      "path": "images/common/nature-05.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "자전거를 타는 인물과 시골길",
+      "width": 400,
+      "height": 533,
+      "bytes": 28770
+    },
+    {
+      "path": "images/common/nature-06.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "논과 풀밭 사이 길을 걷는 인물",
+      "width": 800,
+      "height": 800,
+      "bytes": 82082
+    },
+    {
+      "path": "images/common/nature-07.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "냇물에 발을 담근 모습",
+      "width": 900,
+      "height": 1200,
+      "bytes": 176856
+    },
+    {
+      "path": "images/common/nature-08.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "자전거를 타는 인물과 꽃·들판 풍경",
+      "width": 400,
+      "height": 533,
+      "bytes": 22566
+    },
+    {
+      "path": "images/common/nature-09.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "돌과 풀 사이로 흐르는 얕은 냇물",
+      "width": 915,
+      "height": 648,
+      "bytes": 123783
+    },
+    {
+      "path": "images/common/nature-10.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "해바라기와 초록 들판 풍경",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 355445
+    },
+    {
+      "path": "images/common/nature-11.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "물가에서 여가를 즐기는 사람들",
+      "width": 1440,
+      "height": 1440,
+      "bytes": 259955
+    },
+    {
+      "path": "images/common/nature-12.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "마당에 세워진 자전거들",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 273015
+    },
+    {
+      "path": "images/common/nature-13.jpg",
+      "room": null,
+      "category": "nature",
+      "categoryKo": "주변자연체험",
+      "description": "하늘과 나무가 수면에 비친 물가 풍경",
+      "width": 1080,
+      "height": 1440,
+      "bytes": 159657
+    },
+    {
+      "path": "images/common/food-01.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "채소가 담긴 바구니와 창가",
+      "width": 400,
+      "height": 710,
+      "bytes": 49420
+    },
+    {
+      "path": "images/common/food-02.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "음료와 간식이 놓인 야외 테이블",
+      "width": 400,
+      "height": 533,
+      "bytes": 32873
+    },
+    {
+      "path": "images/common/food-03.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "장갑을 낀 손에 든 노란 구운 음식",
+      "width": 800,
+      "height": 1067,
+      "bytes": 87053
+    },
+    {
+      "path": "images/common/food-04.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "집게로 든 구운 고기 클로즈업",
+      "width": 800,
+      "height": 1067,
+      "bytes": 94974
+    },
+    {
+      "path": "images/common/food-05.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "야외에서 촬영한 라면 한 그릇",
+      "width": 800,
+      "height": 1067,
+      "bytes": 113758
+    },
+    {
+      "path": "images/common/food-06.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "물가에서 캔 음료를 맞대는 손들",
+      "width": 966,
+      "height": 1288,
+      "bytes": 133915
+    },
+    {
+      "path": "images/common/food-07.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "손에 든 캔 음료와 냇가 배경",
+      "width": 900,
+      "height": 1200,
+      "bytes": 96308
+    },
+    {
+      "path": "images/common/food-08.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "물가에서 여러 사람이 캔 음료를 든 모습",
+      "width": 900,
+      "height": 1200,
+      "bytes": 84688
+    },
+    {
+      "path": "images/common/food-09.jpg",
+      "room": null,
+      "category": "food",
+      "categoryKo": "음식",
+      "description": "술병과 야외 바비큐 배경",
+      "width": 800,
+      "height": 1067,
+      "bytes": 102319
+    },
+    {
+      "path": "images/room-101a/bedroom-06.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "창가의 화분·덩굴 장식과 바깥 돌담 풍경",
+      "width": 800,
+      "height": 1066,
+      "bytes": 181559
+    },
+    {
+      "path": "images/room-101a/bedroom-07.jpg",
+      "room": "101호A",
+      "category": "bedroom",
+      "categoryKo": "침실거실",
+      "description": "인형이 놓인 침대와 침구",
+      "width": 800,
+      "height": 1067,
+      "bytes": 61592
+    },
+    {
+      "path": "images/room-101a/kitchen-01.jpg",
+      "room": "101호A",
+      "category": "kitchen",
+      "categoryKo": "주방식사",
+      "description": "싱크대·냉장고·식탁이 보이는 주방",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 151457
+    }
+  ]
+}
